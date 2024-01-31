@@ -147,6 +147,7 @@ impl eframe::App for MyApp {
             egui::widgets::global_dark_light_mode_buttons(ui);
             let signal: Vec<[f64; 2]> = generate_test_signal();
             let signal_fft: Vec<[f64; 2]> = fft(signal.clone());
+            ui.heading("Time");
             ui.horizontal(|ui| {
                 let height = match ctx.input(|i| i.viewport().outer_rect) {
                     Some(rect) => rect.height() / 2.5,
@@ -160,6 +161,7 @@ impl eframe::App for MyApp {
                 // Remember the position of the plot
                 plot_rect_sp = Some(sp.response.rect);
             });
+            ui.heading("Frequency");
             ui.horizontal(|ui| {
                 let height = match ctx.input(|i| i.viewport().outer_rect) {
                     Some(rect) => rect.height() / 2.5,

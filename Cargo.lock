@@ -2356,6 +2356,17 @@ dependencies = [
 ]
 
 [[package]]
+name = "time_freq_gui"
+version = "0.1.0"
+dependencies = [
+ "eframe",
+ "egui_plot",
+ "env_logger",
+ "realfft",
+ "rustfft",
+]
+
+[[package]]
 name = "tiny-skia"
 version = "0.11.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2624,17 +2635,6 @@ name = "wasm-bindgen-shared"
 version = "0.2.90"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "4d91413b1c31d7539ba5ef2451af3f0b833a005eb27a631cec32bc0635a8602b"
-
-[[package]]
-name = "wavelet_test"
-version = "0.1.0"
-dependencies = [
- "eframe",
- "egui_plot",
- "env_logger",
- "realfft",
- "rustfft",
-]
 
 [[package]]
 name = "wayland-backend"
